@@ -1,5 +1,5 @@
 /**
- * repo https://github.com/artzub/JSONP
+ * repo https://github.com/l3dlp-sandbox/JSONP
  */
 
 (function( window, undefined) {

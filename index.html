@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="google-site-verification" content="htCqPyJla3gJQPjjtBEoLTCIK6Ec1Xau0GOeLj4TtFs" />
     <title>GitHub Visualizer</title>
     <link rel="stylesheet" charset="utf-8" href="style.css" >
 
-    <meta property="og:url"           content="http://ghv.artzub.com/" />
+    <meta property="og:url"           content="http://lab.l3dlp.com/ghv/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="GitHub Visualizer" />
     <meta property="og:description"   content="This service lets the user to see statistics of repositories." />
-    <meta property="og:image"         content="http://hsto.org/files/164/ad3/241/164ad32418ea4410b7547bcd8193ebf2.gif" />
+    <meta property="og:image"         content="opengraph.gif" />
 
     <script src="js/cookies.js"></script>
 
@@ -21,12 +20,12 @@
             var ss = location.search;
             var ind = ss ? ss.indexOf('code=') : -1;
             console.log(document.referrer);
-            if (location.host == "artzub.com") {
-                setCookie('referrer', document.referrer || location.host == "artzub.com" ? "http://ghv.artzub.com/" : location.href, {
-                    domain : '.artzub.com',
+            if (location.host == "l3dlp.com") {
+                setCookie('referrer', document.referrer || location.host == "l3dlp.com" ? "http://lab.l3dlp.com/" : location.href, {
+                    domain : '.l3dlp.com',
                     path : '/'
                 });
-                location.replace(location.href.replace(/\/artzub\.com\/ghv/, "/ghv.artzub.com"));
+                location.replace(location.href.replace(/\/l3dlp\.com\/lab/, "/lab.l3dlp.com"));
             }
             else if (ind > -1) {
                 var params = {};
@@ -52,7 +51,7 @@
                 if (!ref || ref.replace(/\s+$/, '').replace(/^\s+/, '').length < 1)
                     ref = document.referrer;
                 setCookie('referrer',  ref, {
-                    domain : '.artzub.com',
+                    domain : '.l3dlp.com',
                     path : '/'
                 });
 
@@ -364,7 +363,7 @@
                 <ul>
                     <li class="hidder" id="about">
                         <strong class="title mini-icon mini-icon-help"></strong>
-                        <a class="forkme" target="_blank" href="https://github.com/artzub/GitHubCodeSwarm" title="Fork me on GitHub"></a>
+                        <a class="forkme" target="_blank" href="https://github.com/l3dlp-sandbox/GitHubVisualizer" title="Fork me on GitHub"></a>
                         <ul>
                             <li>
                                 <h1 class="capture">
@@ -379,19 +378,16 @@
                                 <!-- Place this tag where you want the +1 button to render. -->
                                 <div class="g-plusone" data-size="small" data-annotation="inline" data-width="450"></div>
                                 <br/>
-                                <div class="fb-like" data-href="http://ghv.artzub.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-width="450" data-share="true"></div>
-                                <!--<div class="fb-like" data-href="http://ghv.artzub.com/" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>-->
-                                <!--br/>
-                                <a href="http://selectel.ru/services/cloud/?ref_code=UVUS77Q88s64" style="overflow:hidden; display:block; margin:0;"><img style="width:66px" src="http://static.selectel.ru/partners/ref_white_88.png"></a-->
+                                <div class="fb-like" data-href="http://lab.l3dlp.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-width="450" data-share="true"></div>
                                 <br />
                                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                                 <input type="hidden" name="cmd" value="_donations">
-                                <input type="hidden" name="business" value="artzub@gmail.com">
-                                <input type="hidden" name="lc" value="RU">
-                                <input type="hidden" name="item_name" value="Artem Zubkov">
-                                <input type="hidden" name="item_number" value="GitHubVisualizer">
+                                <input type="hidden" name="business" value="web@l3dlp.com">
+                                <input type="hidden" name="lc" value="FR">
+                                <input type="hidden" name="item_name" value="L3DLP SASU">
+                                <input type="hidden" name="item_number" value="Free Price License">
                                 <input type="hidden" name="no_note" value="0">
-                                <input type="hidden" name="currency_code" value="USD">
+                                <input type="hidden" name="currency_code" value="EUR">
                                 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
                                 <label><small><i>Please! Help me to maintain this service.</i></small></label><br/>
                                 <input type="image" src="https://www.paypalobjects.com/en_US/RU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
@@ -594,7 +590,7 @@
                             </li>
                             <li><hr></li>
                             <li style="font-size: 11px; font-weight: bold;">
-                                @ 2013 Create by<a href="http://artzub.com">Artem Zubkov</a> [<a href="https://github.com/artzub/GitHubCodeSwarm/issues" title="Issues report">GitHub Issues</a> |<a href="mailto:artzub@gmail.com" title="Write me...">Bug report to email</a> ]
+                                @ 2018 <a href="http://l3dlp.com">L3DLP</a> | <a href="mailto:ping@l3dlp.com" title="Write me...">Bug report to email</a> ]
                                 <br />
                                 Powered by<a href="http://d3js.org" title="Perfect javascript framework">D3.js</a><br />
                                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="License Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>
@@ -686,35 +682,35 @@
     </div>
     <div>
         <a href="#repo=mc&climit=100&user=MidnightCommander&run" title="Run visualization repo MidnightCommander">
-            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/artzub/GitHubCodeSwarm/master/resource/ss_mc.png" alt="MidnightCommander">
+            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/l3dlp-sandbox/GitHubCodeSwarm/master/resource/ss_mc.png" alt="MidnightCommander">
         </a>
         <h1><a href="#repo=mc&climit=100&user=MidnightCommander&run" title="Visit on Github">MidnightCommander</a></h1>
         <span>Midnight Commander's repository.</span>
     </div>
     <div>
         <a href="#repo=jquery&climit=100&user=jquery&run" title="Run visualization repo jQuery">
-            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/artzub/GitHubCodeSwarm/master/resource/ss_jquery.png" alt="jQuery">
+            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/l3dlp-sandbox/GitHubCodeSwarm/master/resource/ss_jquery.png" alt="jQuery">
         </a>
         <h1><a href="#repo=jquery&climit=100&user=jquery&run" title="Visit on Github">jQuery</a></h1>
         <span>jQuery JavaScript Library.</span>
     </div>
     <div>
         <a href="#repo=bootstrap&climit=100&user=twbs&run" title="Run visualization repo Bootstrap">
-            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/artzub/GitHubCodeSwarm/master/resource/ss_bootstrap.png" alt="Bootstrap">
+            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/l3dlp-sandbox/GitHubCodeSwarm/master/resource/ss_bootstrap.png" alt="Bootstrap">
         </a>
         <h1><a href="#repo=bootstrap&climit=100&user=twbs&run" title="Visit on Github">Bootstrap</a></h1>
         <span>Sleek, intuitive, and powerful front-end framework for faster and easier web development.</span>
     </div>
     <div>
         <a href="#repo=rails&climit=100&user=rails&run" title="Run visualization repo Ruby on Rails">
-            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/artzub/GitHubCodeSwarm/master/resource/ss_rails.png" alt="Rails">
+            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/l3dlp-sandbox/GitHubCodeSwarm/master/resource/ss_rails.png" alt="Rails">
         </a>
         <h1><a href="#repo=rails&climit=100&user=rails&run" title="Visit on Github">Rails</a></h1>
         <span>Ruby on Rails</span>
     </div>
     <div>
         <a href="#repo=song-of-github&climit=100&user=ajacksified&run" title="Run visualization repo Ruby on Song-of-github">
-            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/artzub/GitHubCodeSwarm/master/resource/ss_song-of-github.png" alt="song-of-github">
+            <img src="resource/preloader24.gif" class="asyncload" data-src="https://raw.github.com/l3dlp-sandbox/GitHubCodeSwarm/master/resource/ss_song-of-github.png" alt="song-of-github">
         </a>
         <h1><a href="#repo=song-of-github&climit=100&user=ajacksified&run" title="Visit on Github">Song-of-github</a></h1>
         <span>Let me play you the song of my contributions.</span>
@@ -748,28 +744,6 @@
         var i = imgs.length;
         while(i--) {
             whenLoad(new Image(), imgs[i], imgs[i].dataset.src);
-        }
-    }
-
-    if (location.search.indexOf('code=') < 0) {
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-28343295-7', 'ghv.artzub.com'/*, {'alwaysSendReferrer': true }*/);
-
-        var ref = getCookie('referrer');
-        console.log(document.referrer);
-        console.log(ref);
-        if (ref && ref.replace(/\s+$/, '').replace(/^\s+/, '').length > 0) {
-            ga('set', 'referrer', ref);
-        }
-        deleteCookie('referrer');
-
-
-        if (document.location.hash.replace(/^#/, "").length < 1) {
-            ga('send', 'pageview');
         }
     }
 </script>

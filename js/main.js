@@ -1,4 +1,8 @@
 /**
+ * User: L3DLP
+ * Date: 10.11.18
+ * Time: 18:31
+ *
  * User: ArtZub
  * Date: 11.01.13
  * Time: 21:41
@@ -108,15 +112,15 @@ var GAEvent = {
 };
 
 function gaEventSend(category, action, label, value) {
-    if (!ga || !sendEvent || sendEventCategory.indexOf(category) < 0)
+    if (!sendEvent || sendEventCategory.indexOf(category) < 0)
         return;
 
-    ga("send", 'event', {
+    console.log(new Array("send", 'event', {
         'eventCategory': category,
         'eventAction': action,
         'eventLabel': label
         , 'eventValue': value
-    });
+    }));
 }
 
 var timeFormat = (function() {
@@ -203,7 +207,7 @@ function applyParams() {
 
     parseParams(hash);
 
-    if(ghcs.params.user == "artzub" &&
+    if(ghcs.params.user == "l3dlp" &&
        ghcs.params.repo && ghcs.params.repo.toLowerCase() == "githubcodeswarm") {
         document.location.hash = "#" + hash.replace("repo=" + ghcs.params.repo, "repo=GitHubVisualizer");
         return;
@@ -219,19 +223,10 @@ function applyParams() {
         alert([
             "Dear friend! I glad to welcome you on Github Visualizer!",
             "You've followed a link that contains the incorrect search query 'wiki-repo='.",
-            "Let me (artzub@gmail.com) know where you found this link, please.",
             "Thank you for your understanding!"
         ].join('\n'));
         document.location.hash = "#" + hash.replace(/wiki-repo=/, "repo=");
         return;
-    }
-
-    if (ga) {
-        if (ga.currentPage != hash) {
-            ga.currentPage = hash;
-            ga('set', 'page', hash ? "?" + hash : hash);
-            ga('send', 'pageview');
-        }
     }
 
     stackLoad = stackLoad-- < 1 ? 0 : stackLoad;
